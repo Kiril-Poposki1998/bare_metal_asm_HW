@@ -10,7 +10,7 @@ main:
   sub rsp, 32
   call rax
   add rsp, 32
-  ret
+  jmp $
 
 section '.data' readable
 string du 'Hello World!', 0xD, 0xA, 0x0
