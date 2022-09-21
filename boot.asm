@@ -1,16 +1,10 @@
-format pe64 efi
-entry main
+[org 0x7c00]
 
-section '.text' executable readable
+mov ah, 0x0E
+mov al, 'X' 
+int 0x10
 
-main:
-  mov rcx, [rdx + 64]
-  mov rax, [rcx + 8]
-  mov rdx, string
-  sub rsp, 32
-  call rax
-  add rsp, 32
-  jmp $
+jmp $
 
-section '.data' readable
-string du 'Hello World!', 0xD, 0xA, 0x0
+times 510-($-$$) db 0
+dw 0xAA55 ; magic MBR number
