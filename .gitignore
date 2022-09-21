@@ -1,3 +1,3 @@
-OVMF.fd
+./OVMF.fd
 drive/empty
 drive/hello
