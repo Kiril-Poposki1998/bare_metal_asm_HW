@@ -1,4 +1,2 @@
 ./OVMF.fd
-drive/empty
-drive/hello
-drive/boot.bin
+drive/*
